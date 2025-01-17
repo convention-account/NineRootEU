@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FMM - File Management Made Easy</title>
+    <link rel="stylesheet" href="../../../static/css/styles-pages.css">
+    <link rel="icon" href="../../../sources/icons/logo.ico">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <span>NineRoot</span>
+            <img src="../../../sources/images/logo.png" alt="Logo">
+            <span>Systems</span>
+        </div>
+        <div class="menu">
+            <a href="../../../index.html">Home</a>
+            <a href="../../../sources/routes/documentation.htm">Documentation</a>
+            <a href="../../../sources/routes/aboutus.htm">About Us</a>
+        </div>
+    </nav>
+
+    <div class="card">
+        <h1>Welcome!</h1>
+        <p>FMM is a simplified version of Windows Explorer. With it, you can perform file system operations faster. Use
+            the command number and its arguments for the operation.</p>
+
+        <h2>Introducing FMM</h2>
+        <p>Revolutionizing File Management for Windows, FMM offers robust encryption algorithms that transform your
+            plaintext data into indecipherable ciphertext, ensuring your information remains secure. With support for
+            various encryption methods, including AES, RSA, and Blowfish, you can encrypt files and messages with
+            confidence.</p>
+
+        <h2>Decode with Ease</h2>
+        <p>Decrypting data is seamless with FMM's intuitive functionality. Whether retrieving encrypted files or
+            decrypting messages, the process is hassle-free. Key management and passphrase protection ensure only
+            authorized users access sensitive information.</p>
+
+        <h2>Seamless File Transfers</h2>
+        <p>Gone are the days of cumbersome file transfers. FMM simplifies moving files between folders, drives, or cloud
+            storage platforms, ensuring efficient transfers.</p>
+
+        <h2>Secure File Handling</h2>
+        <p>Security is paramount at FMM. Your files are handled with care, with robust encryption protocols safeguarding
+            your privacy.</p>
+
+        <p><strong>Note:</strong> If installed in a folder on drive C (Windows), always run as an administrator to avoid
+            closure on function calls.</p>
+        <p>This program is written in Golang.</p>
+        <hr>
+        <br><a style="cursor: pointer;" class="button" onclick="toggleDropdown()">Download</a><br><br>
+        <div class="dropdown" id="versionDropdown">
+            <div class="dropdown-content">
+                <a href="https://nip.nineroot.eu/app-source/FMM 1.0.5 ESX/Output/fmmsetup.exe">1.0.5 ESX version</a>
+                <a href="https://nip.nineroot.eu/app-source/FMM 1.0.6 E/__debug_bin1738044931.zip">1.0.6 E version</a>
+            </div>
+            <br>
+        </div>
+        <p style="font-family: cursive; font-size: small;">Support for every Windows release since 2006, including:
+            Windows 11, Windows 10, Windows 10 on ARM, Windows
+            Server 2019, Windows Server 2016, Windows 8.1, Windows 8, Windows Server 2012, Windows 7, Windows Server
+            2008 R2, Windows Server 2008, and Windows Vista. (No service packs are required.)</p>
+    </div>
+
+</body>
+<style>
+    .card {
+        font-size: large;
+    }
+
+    .button {
+        display: inline-block;
+        padding: 10px 50px;
+        border-radius: 25px;
+        background: linear-gradient(to bottom, white, lightgray);
+        color: black;
+        font-family: 'Arial', sans-serif;
+        font-weight: bold;
+        text-align: center;
+        text-decoration: none;
+        border: 2px solid black;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+    }
+
+    .button:hover {
+        background: darkgray;
+        /* Darker gray background on hover */
+        color: rgb(0, 0, 0);
+        /* Change text color to white */
+        box-shadow: 0 0 20px white, 0 0 40px white;
+        /* White glow effect */
+        transform: scale(1.05);
+        /* Slightly enlarge the button */
+    }
+
+    .dropdown {
+        display: none;
+        /* Hidden by default */
+        position: relative;
+        margin-top: 10px;
+        /* Space between button and dropdown */
+    }
+
+    .dropdown-content {
+        background-color: lightgray;
+        /* Background for dropdown */
+        min-width: 160px;
+        /* Set a minimum width */
+        z-index: 1;
+        border-radius: 5px;
+        /* Rounded corners */
+    }
+
+    .dropdown-content a {
+        color: black;
+        /* Text color */
+        padding: 10px 16px;
+        /* Padding for links */
+        text-decoration: none;
+        /* No underline */
+        display: block;
+        /* Full-width clickable area */
+        transition: background 0.3s ease;
+        /* Smooth background transition */
+    }
+
+    .dropdown-content a:hover {
+        background-color: darkgray;
+        /* Change background on hover */
+    }
+</style>
+<script>
+    function toggleDropdown() {
+        var dropdown = document.getElementById("versionDropdown");
+        dropdown.style.display = (dropdown.style.display === "block") ? "none" : "block";
+    }
+
+    // Close the dropdown if the user clicks outside of it
+    window.onclick = function (event) {
+        if (!event.target.matches('.button')) {
+            var dropdowns = document.getElementsByClassName("dropdown");
+            for (var i = 0; i < dropdowns.length; i++) {
+                var openDropdown = dropdowns[i];
+                if (openDropdown.style.display === "block") {
+                    openDropdown.style.display = "none";
+                }
+            }
+        }
+    }
+</script>
+
+</html>

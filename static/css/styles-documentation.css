@@ -1,0 +1,258 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(120deg, black, grey, white);
+    background-size: 300% 300%;
+    animation: gradient 15s ease infinite;
+    color: white;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+
+.logo {
+    user-select: none;
+}
+
+@font-face {
+    font-family: BEVLG;
+    src: url('font/BEVLG.ttf');
+}
+
+@font-face {
+    font-family: KanitM;
+    src: url('font/Kanit-Medium.ttf');
+}
+
+@font-face {
+    font-family: BarlowLight;
+    src: url('font/BarlowLight.ttf');
+}
+
+@font-face {
+    font-family: MontserratLight;
+    src: url('font/MontserratLight.ttf');
+}
+
+@font-face {
+    font-family: MontserratBold;
+    src: url('font/MontserratBold.ttf');
+}
+
+@font-face {
+    font-family: MontserratBlackItalic;
+    src: url('font/MontserratBlackItalic.ttf');
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    background-color: black;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.navbar .logo {
+    display: flex;
+    align-items: center;
+    margin-right: 2rem;
+}
+
+.navbar .logo img {
+    height: 40px;
+    margin: 0 1rem;
+}
+
+.navbar .menu {
+    display: flex;
+    gap: 2rem;
+}
+
+.navbar .menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.title-app {
+    margin-top: 6rem;
+    font-size: 2rem;
+    font-family: MontserratBold;
+    text-align: center;
+}
+
+.toast-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+    padding: 2rem;
+    width: 100%;
+    max-width: 1200px;
+    margin: 2rem auto 0;
+    box-sizing: border-box;
+}
+
+.toast {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    font-family: MontserratLight;
+}
+
+.toast:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.toast-title-question {
+    font-family: MontserratBlackItalic;
+}
+
+.footer {
+    width: 100%;
+    background-color: #111;
+    color: #fff;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    left: 0;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    gap: 15rem;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.footer-logo img {
+    height: 50px;
+    margin-right: 10px;
+}
+
+.footer-logo span {
+    font-family: 'MontserratBold', Arial, sans-serif;
+    font-size: 1.2rem;
+}
+
+.footer-links {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: #ddd;
+    text-decoration: none;
+    font-family: 'BarlowLight', Arial, sans-serif;
+    font-size: 0.9rem;
+}
+
+.footer-links a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.footer-social {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.footer-social a img {
+    width: 30px;
+    height: 30px;
+}
+
+.footer-bottom {
+    text-align: center;
+    font-size: 0.8rem;
+    border-top: 1px solid #444;
+    padding-top: 10px;
+    color: #aaa;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+    }
+
+    .navbar .logo {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .navbar .menu {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .title-app {
+        margin-top: 4rem;
+        font-size: 1.5rem;
+    }
+
+    .toast-container {
+        padding: 1rem;
+    }
+
+    .toast {
+        padding: 0.5rem;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .footer-links,
+    .footer-social {
+        justify-content: center;
+    }
+}

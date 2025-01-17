@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Receipt</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            margin-top: 20px;
+            background-color: #f5f5f5;
+            font-family: 'Roboto', sans-serif;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .well {
+            background-color: #fafafa;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            width: 100%;
+            cursor: pointer;
+        }
+        .address strong {
+            font-size: 1.2em;
+        }
+        .address, .receipt-details {
+            margin-bottom: 20px;
+        }
+        .receipt-title {
+            font-size: 2em;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        .table th {
+            background-color: #f8f8f8;
+        }
+        .table-hover>tbody>tr:hover {
+            background-color: #f1f1f1;
+        }
+        .btn-success {
+            background-color: #28a745;
+            border-color: #28a745;
+        }
+        .btn-success:hover {
+            background-color: #218838;
+            border-color: #1e7e34;
+        }
+        .text-danger strong {
+            color: #dc3545;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="well">
+            <div class="row">
+                <div class="col-xs-6 col-sm-6 col-md-6 address">
+                    <address>
+                        <strong>NineRoot Interactive Studio</strong><br>
+                        Kaunas<br>
+                        Lithuania, 2024<br>
+                        <abbr title="Phone">P:</abbr> 380970150672
+                    </address>
+                </div>
+                <div class="col-xs-6 col-sm-6 col-md-6 text-right receipt-details">
+                    <p>
+                        <em>Type: ownership License</em>
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="text-center">
+                    <h1 class="receipt-title">Receipt</h1>
+                </div>
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>Product</th>
+                            <th>#</th>
+                            <th class="text-center">Price</th>
+                            <th class="text-center">Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="col-md-9"><em>App ownership license for life</em></td>
+                            <td class="col-md-1 text-center">1</td>
+                            <td class="col-md-1 text-center">$450</td>
+                            <td class="col-md-1 text-center">$450</td>
+                        </tr>
+                        <tr>
+                            <td class="col-md-9"><em>Application technical pack</em></td>
+                            <td class="col-md-1 text-center">1</td>
+                            <td class="col-md-1 text-center">$40</td>
+                            <td class="col-md-1 text-center">$40</td>
+                        </tr>
+                        <tr>
+                            <td class="col-md-9"><em>Other preparation works & materials</em></td>
+                            <td class="col-md-1 text-center">3</td>
+                            <td class="col-md-1 text-center">$10</td>
+                            <td class="col-md-1 text-center">$10</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td class="text-right">
+                                <p>
+                                    <strong>Subtotal: </strong>
+                                </p>
+                                <p>
+                                    <strong>Tax: </strong>
+                                </p>
+                            </td>
+                            <td class="text-center">
+                                <p>
+                                    <strong>$500</strong>
+                                </p>
+                                <p>
+                                    <strong>21%, $105</strong>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td class="text-right">
+                                <h4><strong>Total: </strong></h4>
+                            </td>
+                            <td class="text-center text-danger">
+                                <h4><strong>$605</strong></h4>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <button type="button" class="btn btn-success btn-lg btn-block">
+                    Pay Now <span class="glyphicon glyphicon-chevron-right"></span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+</body>
+
+</html>

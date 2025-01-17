@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHPS</title>
+    <link rel="stylesheet" type="text/css" href="../../../static/css/styles-pages.css">
+    <link rel="icon" type="image/x-icon" href="../../../sources/icons/logo.ico">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <span>NineRoot</span>
+            <img src="../../../sources/images/logo.png" alt="Logo">
+            <span>SoftStudio</span>
+        </div>
+        <div class="menu">
+            <a href="../../../index.html">Home</a>
+            <a href="../../../sources/routes/documentation.htm">Documentation</a>
+            <a href="../../../sources/routes/aboutus.htm">About us</a>
+        </div>
+    </nav>
+
+    <div class="card">
+        <h1>Welcome!</h1>
+        <p>The SHPS Shop Platform System is a robust and user-friendly application designed to streamline retail
+            operations for businesses of all sizes.</p>
+        <p>This comprehensive point-of-sale (POS) solution offers features such as inventory management, sales tracking,
+            and customer relationship management.</p>
+        <p>With its intuitive interface, SHPS enables staff to process transactions quickly and efficiently, enhancing
+            the overall shopping experience for customers.</p>
+        <p>The system supports various payment methods and integrates seamlessly with e-commerce platforms, making it
+            ideal for both in-store and online sales.</p>
+        <p>Additionally, SHPS provides detailed reporting and analytics, empowering retailers to make informed decisions
+            and optimize their operations.</p>
+        <p><strong>Note:</strong> If installed in a folder on drive C (Windows), always run as an administrator to avoid
+            closure on function calls.</p>
+        <p>This program is written in Golang.</p>
+        <hr>
+        <br><a style="cursor: pointer;" class="button" onclick="toggleDropdown()">Download</a><br><br>
+        <div class="dropdown" id="versionDropdown">
+            <div class="dropdown-content">
+                <a href="https://nip.nineroot.eu/app-source/SHPS/SHPSsetup.exe">SHPS version 1.0</a>
+            </div>
+            <br>
+        </div>
+        <p style="font-family: cursive; font-size: small;">Support for every Windows release since 2006, including:
+            Windows 11, Windows 10, Windows 10 on ARM, Windows
+            Server 2019, Windows Server 2016, Windows 8.1, Windows 8, Windows Server 2012, Windows 7, Windows Server
+            2008 R2, Windows Server 2008, and Windows Vista. (No service packs are required.)</p>
+    </div>
+    </div>
+</body>
+<style>
+    .card {
+        font-size: x-large;
+    }
+
+    .button {
+        display: inline-block;
+        padding: 10px 50px;
+        border-radius: 25px;
+        background: linear-gradient(to bottom, white, lightgray);
+        color: black;
+        font-family: 'Arial', sans-serif;
+        font-weight: bold;
+        text-align: center;
+        text-decoration: none;
+        border: 2px solid black;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+    }
+
+    .button:hover {
+        background: darkgray;
+        /* Darker gray background on hover */
+        color: rgb(0, 0, 0);
+        /* Change text color to white */
+        box-shadow: 0 0 20px white, 0 0 40px white;
+        /* White glow effect */
+        transform: scale(1.05);
+        /* Slightly enlarge the button */
+    }
+
+    .dropdown {
+        display: none;
+        /* Hidden by default */
+        position: relative;
+        margin-top: 10px;
+        /* Space between button and dropdown */
+    }
+
+    .dropdown-content {
+        background-color: lightgray;
+        /* Background for dropdown */
+        min-width: 160px;
+        /* Set a minimum width */
+        z-index: 1;
+        border-radius: 5px;
+        /* Rounded corners */
+    }
+
+    .dropdown-content a {
+        color: black;
+        /* Text color */
+        padding: 10px 16px;
+        /* Padding for links */
+        text-decoration: none;
+        /* No underline */
+        display: block;
+        /* Full-width clickable area */
+        transition: background 0.3s ease;
+        /* Smooth background transition */
+    }
+
+    .dropdown-content a:hover {
+        background-color: darkgray;
+        /* Change background on hover */
+    }
+</style>
+<script>
+    function toggleDropdown() {
+        var dropdown = document.getElementById("versionDropdown");
+        dropdown.style.display = (dropdown.style.display === "block") ? "none" : "block";
+    }
+
+    // Close the dropdown if the user clicks outside of it
+    window.onclick = function (event) {
+        if (!event.target.matches('.button')) {
+            var dropdowns = document.getElementsByClassName("dropdown");
+            for (var i = 0; i < dropdowns.length; i++) {
+                var openDropdown = dropdowns[i];
+                if (openDropdown.style.display === "block") {
+                    openDropdown.style.display = "none";
+                }
+            }
+        }
+    }
+</script>
+
+</html>
